@@ -3,18 +3,17 @@ module.exports = {
 
     description: 'Test test.',
 
-    inputs: {
-        name: { type: 'string' },
-        age: { type: 'number' },
-    },
+    inputs: {},
 
     exits: {},
 
     fn: async function (inputs) {
         try {
-            let rs = await TestTable.find();
-            console.log(inputs);
-            return rs;
+            // let rs = await TestTable.find();
+            return {
+                a: 1,
+                b: 2,
+            };
         } catch (error) {
             console.log(error);
         }
